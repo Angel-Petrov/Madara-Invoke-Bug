@@ -1,4 +1,4 @@
-https://github.com/Angel-Petrov/Madara-Invoke-Bug/assets/146711006/af67a080-4041-48bc-b74c-659a971a1fc3
+https://github.com/Angel-Petrov/Madara-Invoke-Bug/assets/146711006/582c2baa-db8c-4403-97e9-35778cad632e
 
 This repo is a simple project to test a bug in madara.
 
