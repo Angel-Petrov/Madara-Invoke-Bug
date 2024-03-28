@@ -167,8 +167,6 @@ async fn main() -> color_eyre::Result<()> {
         wait_for_tx(&starknet_rpc, hash, CHECK_INTERVAL).await?;
     }
 
-    println!("Hello, world!");
-
     Ok(())
 }
 
