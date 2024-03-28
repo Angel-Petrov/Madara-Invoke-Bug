@@ -1,5 +1,6 @@
 use std::{
     fs,
+    str::FromStr,
     sync::Arc,
     time::{Duration, SystemTime},
 };
@@ -36,6 +37,13 @@ async fn main() -> color_eyre::Result<()> {
 
     // Initialize the error handler.
     color_eyre::install()?;
+
+    let args: usize = std::env::args()
+        .nth(1)
+        .as_deref()
+        .map(FromStr::from_str)
+        .transpose()?
+        .unwrap_or(1000);
 
     let starknet_rpc = Arc::new(JsonRpcClient::new(HttpTransport::new(Url::parse(
         "http://localhost:9944",
@@ -150,7 +158,7 @@ async fn main() -> color_eyre::Result<()> {
 
     let mut vec = Vec::with_capacity(1000);
 
-    for _ in 0..1000 {
+    for _ in 0..args {
         let result = account
             .execute(vec![call.clone()])
             .max_fee(MAX_FEE)
