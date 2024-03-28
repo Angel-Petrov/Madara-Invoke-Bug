@@ -1,4 +1,4 @@
-![](demo.mp4)
+![](https://github.com/Angel-Petrov/Madara-Invoke-Bug/raw/master/demo.mp4)
 
 This repo is a simple project to test a bug in madara.
 
