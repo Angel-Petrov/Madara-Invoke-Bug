@@ -1,0 +1,18 @@
+[package]
+name = "bug_madara"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# Starknet dependencies, currently the same starknet revision as the one in
+# madara https://github.com/keep-starknet-strange/madara/blob/main/Cargo.toml#L268
+starknet = { git = "https://github.com/xJonathanLEI/starknet-rs.git", rev = "64ebc36" }
+
+tokio = { version = "1", features = ["full"] }
+color-eyre = "0.6.2"
+url = "2.4.0"
+env_logger = "0.11.2"
+log = "0.4.17"
+serde_json = "1.0.115"
